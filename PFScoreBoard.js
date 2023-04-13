@@ -22,5 +22,18 @@ function main(workbook: ExcelScript.Workbook) {
             }
         }
     }
+
+    let rowC = 0;
+    for (let name in data){
+        let cell = totalSheets[0].getCell(rowC,0);
+        cell.setValue(name);
+        let columnC = 1;
+        for (let info in data[name]){
+            cell = totalSheets[0].getCell(rowC,columnC);
+            cell.setValue(`${info}: ${data[name][info]}`);
+            columnC++;
+        }
+        rowC++;
+    }
     console.log(data);
 }
