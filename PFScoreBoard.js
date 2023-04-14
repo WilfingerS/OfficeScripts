@@ -1,3 +1,5 @@
+// AUTHOR: SETH WILFINGER
+// DATE: 4.13.2023
 function main(workbook: ExcelScript.Workbook) {
     const totalSheets = workbook.getWorksheets();
     let data = {["Total Club"]:{BCM:0,TOTAL:0}};
@@ -35,5 +37,5 @@ function main(workbook: ExcelScript.Workbook) {
         }
         rowC++;
     }
-    console.log(data);
+    //console.log(data);
 }
